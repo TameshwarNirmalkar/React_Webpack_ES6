@@ -1,6 +1,6 @@
 import AppDispatcher from '../dispatcher/AppDispatcher';  
 import appConstants from '../constants/appConstants';  
-import objectAssign from 'react/lib/Object.assign';  
+// import objectAssign from 'react/lib/Object.assign';  
 import { EventEmitter } from 'events';
 
 const CHANGE_EVENT = 'change';
@@ -17,7 +17,7 @@ const removeItem = (index) => {
   _store.list.splice(index, 1);
 }
 
-const todoStore = objectAssign({}, EventEmitter.prototype, {  
+const todoStore = Object.assign({}, EventEmitter.prototype, {  
   addChangeListener(cb){
     this.on(CHANGE_EVENT, cb);
   },

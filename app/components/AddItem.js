@@ -8,8 +8,8 @@ class AddItem extends React.Component {
     }
     handleSubmit(e){
         if(e.keyCode === 13){
-            let newItem = this.refs.newItem.getDOMNode().value;
-            this.refs.newItem.getDOMNode().value = '';
+            let newItem = this.refs.newItem.value;
+            this.refs.newItem.value = '';
             this.props.add(newItem);
         }
     }
