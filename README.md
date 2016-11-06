@@ -1,2 +1,2 @@
-# TestApp
-this is test app
+# React Webpack ES6
+this is sample react es6 webpack app
