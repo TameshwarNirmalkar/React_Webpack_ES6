@@ -30,21 +30,19 @@ class List extends React.Component {
     }
     render(){
         let handlelistItems = this.props.items.map((item, index) => {
-                return (
+        return (
             <li key={index} className="list-group-item" style={styles.listGroup}>
-    <span className="glyphicon glyphicon-remove" style={styles.removeItem} onClick={this.props.remove.bind(null, index)}> </span>
-        <span style={styles.todoItem}>
-        {item}
-    </span>
-        </li>
-    )
+                <span className="glyphicon glyphicon-remove" style={styles.removeItem} onClick={this.props.remove.bind(null, index)}> </span>
+                <span style={styles.todoItem}>
+                    {item}
+                </span>
+            </li>
+        )
     });
         return (
-            <ul style={styles.uList}>
-        {handlelistItems}
-    </ul>
+            <ul style={styles.uList}> {handlelistItems}</ul>
     )
     }
 }
 
-module.exports = List;
+export { List };

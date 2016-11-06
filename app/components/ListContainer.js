@@ -1,6 +1,6 @@
 import React from 'react';  
 import AddItem from './AddItem';  
-import List from './List';  
+import { List } from './List';  
 import todoStore from '../stores/todoStore';  
 import todoActions from '../actions/todoActions';
 
